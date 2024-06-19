@@ -438,9 +438,7 @@ namespace Avalonia.Controls
             if (_source is null || RowSelection is null)
                 return;
 
-            var allowedEffects = AutoDragDropRows && !_source.IsSorted ?
-                DragDropEffects.Move :
-                DragDropEffects.None;
+            var allowedEffects = AutoDragDropRows ? DragDropEffects.Move : DragDropEffects.None;
             var route = BuildEventRoute(RowDragStartedEvent);
 
             if (route.HasHandlers)

@@ -12,6 +12,7 @@ using Avalonia.Rendering;
 using Avalonia.Utilities;
 using Avalonia.VisualTree;
 using CollectionExtensions = Avalonia.Controls.Models.TreeDataGrid.CollectionExtensions;
+#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace Avalonia.Controls.Primitives
 {

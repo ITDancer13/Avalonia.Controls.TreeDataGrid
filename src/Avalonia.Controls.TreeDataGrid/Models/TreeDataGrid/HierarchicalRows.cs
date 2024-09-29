@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using Avalonia.Controls.Utils;
 using Avalonia.Utilities;
+#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace Avalonia.Controls.Models.TreeDataGrid
 {

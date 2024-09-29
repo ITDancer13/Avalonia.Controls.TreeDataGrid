@@ -12,6 +12,7 @@ using Avalonia.Interactivity;
 using Avalonia.Threading;
 using Avalonia.Utilities;
 using Avalonia.VisualTree;
+#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace Avalonia.Controls
 {

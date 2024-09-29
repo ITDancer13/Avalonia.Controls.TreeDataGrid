@@ -62,7 +62,9 @@ namespace Avalonia.Controls.Models.TreeDataGrid
         {
             // Rows in an AnonymousSortableRows collection have Auto height so we only
             // know the start position of the first row.
+#pragma warning disable CS0618 // Type or member is obsolete
             if (MathUtilities.IsZero(y))
+#pragma warning restore CS0618 // Type or member is obsolete
                 return (0, 0);
             return (-1, -1);
         }

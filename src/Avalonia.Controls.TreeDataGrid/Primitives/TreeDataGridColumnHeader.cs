@@ -3,6 +3,7 @@ using System.ComponentModel;
 using Avalonia.Controls.Models.TreeDataGrid;
 using Avalonia.Input;
 using Avalonia.Utilities;
+#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace Avalonia.Controls.Primitives
 {

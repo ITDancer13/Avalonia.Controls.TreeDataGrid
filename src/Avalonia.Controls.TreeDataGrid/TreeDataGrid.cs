@@ -213,6 +213,7 @@ namespace Avalonia.Controls
 
         public event EventHandler<TreeDataGridCellEventArgs>? CellClearing;
         public event EventHandler<TreeDataGridCellEventArgs>? CellPrepared;
+        public event EventHandler<TreeDataGridCellEventArgs>? CellValueChanged;
         public event EventHandler<TreeDataGridRowEventArgs>? RowClearing;
         public event EventHandler<TreeDataGridRowEventArgs>? RowPrepared;
 
@@ -412,6 +413,17 @@ namespace Avalonia.Controls
                 _cellArgs ??= new TreeDataGridCellEventArgs();
                 _cellArgs.Update(cell, columnIndex, rowIndex);
                 CellPrepared(this, _cellArgs);
+                _cellArgs.Update(null, -1, -1);
+            }
+        }
+
+        internal void RaiseCellValueChanged(TreeDataGridCell cell, int columnIndex, int rowIndex)
+        {
+            if (CellValueChanged is not null)
+            {
+                _cellArgs ??= new TreeDataGridCellEventArgs();
+                _cellArgs.Update(cell, columnIndex, rowIndex);
+                CellValueChanged(this, _cellArgs);
                 _cellArgs.Update(null, -1, -1);
             }
         }
